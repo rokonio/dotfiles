@@ -1,5 +1,6 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
@@ -7,7 +8,7 @@ bufferline.setup {
   options = {
     close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
-    offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+    offsets = { { filetype = "NvimTree", text = "", padding = 1 }, { filetype = "neo-tree", text = "", padding = 1 } },
     separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
   },
 

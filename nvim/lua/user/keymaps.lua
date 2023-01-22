@@ -23,27 +23,31 @@ keymap("n", "<C-k>", "<C-w>k", { desc = "Focus on top window", silent = true })
 keymap("n", "<C-l>", "<C-w>l", { desc = "Focus on right window", silent = true })
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<C-Down>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", { desc = "Move to left tab", silent = true })
-keymap("n", "<S-h>", ":bprevious<CR>", { desc = "Move to right tab", silent = true })
+keymap("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Move to left tab", silent = true })
+keymap("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Move to right tab", silent = true })
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear highlight", silent = true })
 
 -- Close buffers
-keymap("n", "<leader>c", "<cmd>Bdelete!<CR><cmd>NvimTreeFocus<CR>", { desc = "Close tab", silent = true })
+keymap("n", "<leader>c", "<cmd>update<CR><cmd>Bdelete!<CR><cmd>NeoTreeFocus<CR>", { desc = "Save and Close tab", silent = true })
+keymap("n", "<leader>q", "<cmd>update<CR><cmd>Bdelete!<CR>", { desc = "Save and Close tab", silent = true })
+
+-- Save buffer
+keymap({"n", "i", "v"}, "aa", "<esc>:update<CR>", { desc = "Save file", silent = true })
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
 -- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- Press kj fast to enter
+keymap("i", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -52,15 +56,15 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer", silent = true })
+-- NeoTree
+keymap("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>", { desc = "Toggle file explorer", silent = true })
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find a file", silent = true })
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", { desc = "Find in all file", silent = true })
-keymap("n", "<leader>fp", ":Telescope projects<CR>", { desc = "Open projects", silent = true })
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find a buffer", silent = true })
-keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Open keymaps explorer", silent = true })
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find a file", silent = true })
+keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>", { desc = "Find in all file", silent = true })
+keymap("n", "<leader>fp", "<cmd>Telescope projects<CR>", { desc = "Open projects", silent = true })
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find a buffer", silent = true })
+keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Open keymaps explorer", silent = true })
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)

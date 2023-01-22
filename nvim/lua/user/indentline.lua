@@ -1,5 +1,6 @@
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
@@ -14,5 +15,6 @@ indent_blankline.setup {
     "help",
     "packer",
     "NvimTree",
+    "neo-tree",
   },
 }

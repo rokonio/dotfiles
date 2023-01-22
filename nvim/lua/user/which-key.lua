@@ -1,5 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
@@ -12,6 +13,6 @@ which_key.register {
     l = { name = "LSP" },
     d = { name = "Debugger" },
     g = { name = "Git" },
-    fe = { name = "Edit config"}
+    fe = { name = "Edit config" },
   },
 }

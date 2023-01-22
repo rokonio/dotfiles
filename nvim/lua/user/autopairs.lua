@@ -1,6 +1,7 @@
 -- Setup nvim-cmp.
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 

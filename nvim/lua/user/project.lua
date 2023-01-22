@@ -1,5 +1,6 @@
 local status_ok, project = pcall(require, "project_nvim")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 project.setup {

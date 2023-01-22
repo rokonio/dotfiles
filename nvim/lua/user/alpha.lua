@@ -2,11 +2,13 @@
 
 local path_ok, alpha = pcall(require, "alpha")
 if not path_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
-local path_ok, plenary_path = pcall(require, "plenary.path")
-if not path_ok then
+local path_ok2, plenary_path = pcall(require, "plenary.path")
+if not path_ok2 then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 

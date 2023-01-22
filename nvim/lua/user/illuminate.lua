@@ -1,9 +1,10 @@
 local status_ok, illuminate = pcall(require, "illuminate")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
-vim.g.Illuminate_ftblacklist = { "alpha", "NvimTree" }
+vim.g.Illuminate_ftblacklist = { "alpha", "NvimTree", "neo-tree" }
 vim.api.nvim_set_keymap("n", "<a-n>", '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', { noremap = true })
 vim.api.nvim_set_keymap(
   "n",
@@ -24,6 +25,7 @@ illuminate.configure {
     "fugitive",
     "alpha",
     "NvimTree",
+    "nvim-tree",
     "packer",
     "neogitstatus",
     "Trouble",

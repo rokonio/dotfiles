@@ -1,10 +1,12 @@
 local status_ok, treesitter = pcall(require, "nvim-treesitter")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
+  print("Exited from " .. debug.getinfo(1, "S").source .. ":" .. debug.getinfo(1, "l").currentline)
   return
 end
 
