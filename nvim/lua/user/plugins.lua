@@ -86,6 +86,8 @@ return packer.startup(function(use)
   use { "folke/which-key.nvim", commit = "e4fa445065a2bb0bbc3cca85346b67817f28e83e" }
   use { "stevearc/dressing.nvim", commit = "4436d6f41e2f6b8ada57588acd1a9f8b3d21453c" }
   use { "Saecki/crates.nvim", commit = "707ed7d6f8927a5ec0c241aa793f694f1b05f731" }
+  use { "tpope/vim-surround", commit = "3d188ed2113431cf8dac77be61b842acb64433d9" }
+  use { "Darazaki/indent-o-matic", commit = "749b7cbae2d52aa1f65b6a2cd7b879a0b52ac3a1" }
 
   -- snippets
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine

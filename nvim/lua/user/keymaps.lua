@@ -40,7 +40,7 @@ keymap("n", "<leader>c", "<cmd>update<CR><cmd>Bdelete!<CR><cmd>NeoTreeFocus<CR>"
 keymap("n", "<leader>q", "<cmd>update<CR><cmd>Bdelete!<CR>", { desc = "Save and Close tab", silent = true })
 
 -- Save buffer
-keymap({"n", "i", "v"}, "aa", "<esc>:update<CR>", { desc = "Save file", silent = true })
+keymap({"n", "i", "v"}, "<C-s>", "<esc>:update<CR>", { desc = "Save file", silent = true })
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
