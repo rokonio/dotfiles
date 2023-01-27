@@ -104,7 +104,7 @@ keymap("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection up" })
 keymap("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection down" })
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
-keymap("v", "<leader>p", [["_dP]], { desc = "Paste without changing buffer" })
+keymap("v", "p", [["_dP]], { desc = "Paste without changing buffer" })
 
 keymap({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
 keymap({ "n", "v" }, "<leader>sp", [["+p]], { desc = "Paste from system clipboard" })
