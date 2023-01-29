@@ -83,11 +83,12 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
   -- Useful plugins
-  use { "folke/which-key.nvim", commit = "e4fa445065a2bb0bbc3cca85346b67817f28e83e" }
-  use { "stevearc/dressing.nvim", commit = "4436d6f41e2f6b8ada57588acd1a9f8b3d21453c" }
-  use { "Saecki/crates.nvim", commit = "707ed7d6f8927a5ec0c241aa793f694f1b05f731" }
-  use { "tpope/vim-surround", commit = "3d188ed2113431cf8dac77be61b842acb64433d9" }
-  use { "Darazaki/indent-o-matic", commit = "749b7cbae2d52aa1f65b6a2cd7b879a0b52ac3a1" }
+  use { "folke/which-key.nvim", commit = "e4fa445065a2bb0bbc3cca85346b67817f28e83e" } -- Add a keybinding explorer
+  use { "stevearc/dressing.nvim", commit = "4436d6f41e2f6b8ada57588acd1a9f8b3d21453c" } -- Vim UI for things such as renaming
+  use { "Saecki/crates.nvim", commit = "707ed7d6f8927a5ec0c241aa793f694f1b05f731" } -- Check crates.io for versions of rust crates
+  use { "tpope/vim-surround", commit = "3d188ed2113431cf8dac77be61b842acb64433d9" } -- Better operator on text object 
+  use { "Darazaki/indent-o-matic", commit = "749b7cbae2d52aa1f65b6a2cd7b879a0b52ac3a1" } -- Identation detection
+  use { "karb94/neoscroll.nvim", commit = "d7601c26c8a183fa8994ed339e70c2d841253e93" } -- Smooth scroll
 
   -- snippets
   use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" } --snippet engine

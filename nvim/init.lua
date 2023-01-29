@@ -23,3 +23,5 @@ require "user.dap"
 require "user.which-key"
 require "user.crates"
 require "user.rusttools"
+require "user.neoscroll"
+
