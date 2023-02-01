@@ -58,7 +58,7 @@ keymap("v", ">", ">gv", opts)
 
 -- NeoTree
 keymap("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>", { desc = "Toggle file explorer", silent = true })
-keymap("n", "<leader>e", "<cmd>NeoTreeFocus<CR>", { desc = "Focus file explorer", silent = true })
+keymap("n", "<leader>o", "<cmd>NeoTreeFocus<CR>", { desc = "Focus file explorer", silent = true })
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find a file", silent = true })
