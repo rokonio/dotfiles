@@ -50,10 +50,12 @@ lualine.setup {
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = { "branch" },
-    lualine_c = { diagnostics },
-    lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_y = { location },
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = { "branch" },
+    lualine_y = {},
+    -- lualine_z = {},
+    -- lualine_y = { location },
     lualine_z = { "progress" },
   },
 }
