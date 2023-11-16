@@ -1,0 +1,29 @@
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md", "--config", "/home/rokonio/.config/dprint.json"]}
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+file-types = ["typst", "typ"]
+indent = { tab-width = 2, unit = "  " }
+comment-token = "//"
+injection-regex = "typst"
+formatter = { command = "typstfmt" }
+roots = []
+language-servers = [ "typst-lsp" ]
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'$' = '$'
+'"' = '"'
+
+[language-server.typst-lsp]
+command = "typst-lsp"
+
+[[grammar]]
+name = "typst"
+source.git = "https://github.com/uben0/tree-sitter-typst"
+source.rev = "e35aa22395fdde82bbc4b5700c324ce346dfc9e5"

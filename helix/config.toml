@@ -1,0 +1,47 @@
+theme = "onedark"
+
+[editor]
+color-modes = true
+indent-guides.render = true
+
+[editor.cursor-shape]
+normal = "block"
+select = "underline"
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+# Quick iteration on config changes
+C-p = ":config-open"
+C-r = ":config-reload"
+C-s = ":w" 
+C-q = "save_selection"
+C-f = ":format"
+
+# Some nice Helix stuff
+C-h = "select_prev_sibling"
+C-j = "shrink_selection"
+C-k = "expand_selection"
+C-l = "select_next_sibling"
+
+# Personal preference
+o = ["open_below", "normal_mode"]
+O = ["open_above", "normal_mode"]
+
+[keys.insert]
+# Escape the madness! No more fighting with the cursor! Or with multiple cursors!
+esc = ["collapse_selection", "normal_mode"]
+j = { k = "normal_mode" } # Maps `jk` to insert mode
+k = { j = "normal_mode" } # Maps `kj` to insert mode
+C-s = ":w" 
+
+[keys.select]
+# Make selecting lines in visual mode behave sensibly
+k = ["extend_line_up", "extend_to_line_bounds"]
+j = ["extend_line_down", "extend_to_line_bounds"]
+C-s = ":w" 
+
+[keys.normal.space]
+q = ":buffer-close"
